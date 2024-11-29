@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 45px; 
+            right: -12px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        body.dark-mode header {
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        body.dark-mode nav {
+             background-color: #333; 
+        } 
+
+         body.dark-mode nav ul li a {
+             color: #8b5e3c; 
+        }
+
+        body.dark-mode .profile-details {
+             background-color: #333; 
+             color: #fff; 
+        }
+
+        body.dark-mode .contact-section {
+             background-color: #333;
+             color: #fff;
+        }
+        
+        body.dark-mode iframe {
+             border: 1px solid #444; 
+
+        }
+         
+        body.dark-mode .contact-info {
+             background-color: #444;
+     
+        }
+ 
+        body.dark-mode .contact-container {
+            color: #fff;
+        }
+
+         body.dark-mode .contact-form {
+            color: #fff;
+        }
+
+          body.dark-mode .contact-form input,
+          body.dark-mode .contact-form textarea {
+            color: #fff; 
+            border: 1px solid #888; 
+        }
+
+          body.dark-mode .contact-form button {
+             background-color: #6a482d; 
+             color: #fff; /* White text */
+             border: 1px solid #444;
+         }
+
+        .dark-mode-toggle input {
+            display: none;
+        }
+
+        .dark-mode-toggle .slider {
+            position: relative;
+            width: 50px;
+            height: 28px;
+            background-color: #ccc;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 2px solid #fff; 
+        }
+
+        .dark-mode-toggle .slider::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dark-mode-toggle input:checked + .slider {
+            background-color: #8b5e3c;
+            border-color: #6a482d;
+        }
+
+        .dark-mode-toggle input:checked + .slider::before {
+            transform: translate(20px, -50%);
+            background-color: #555048;
+        }
+     </style>
+</head>
+ <br>
+   <header class="animated fade-in-header">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/_nrnabellah/profilecard/?igsh=MjJ3aHpxcmtnNWNt"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/15M8RQtnys/?mibextid=LQQJ4d"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/nurul-nabilah-rosli-48580029b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="linkedin.png" alt="LinkedIn"></a>
+     <div class="dark-mode-toggle">
+    <input type="checkbox" id="dark-mode-checkbox" onclick="toggleDarkMode()">
+    <label for="dark-mode-checkbox" class="slider"></label>
+    </div>
+    </header>
+      <nav>
+          <ul style="center" class="fade-in-nav">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="profile.html">Profile</a></li>
+               <li><a href="education.html">Education</a></li>
+               <li><a href="skills.html">Skills</a></li>
+               <li><a href="experience.html">Experience</a></li>
+               <li><a href="contact.html" class="active">Contact Me</a></li>
+          </ul>
+        </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section fade-in-section">
+        <div class="contact-info">
+            <p><img src="email.png" alt="Email Icon"> Email: bella.rosli1909@gmail.com</p>
+            <p><img src="phone.png" alt="Phone Icon"> Call: 018-3124123</p>
+            <p><img src="address.png" alt="address Icon"> Address: No. 353, Laluan Meranti 12, Taman Kuala Kangsar, 33000, Kuala Kangsar, Perak</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15931.691059375023!2d100.93539455109833!3d4.7719681456145265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cae7518fdc3c1d%3A0x59b5e6d9b563c43!2sTaman%20Kuala%20Kangsar%2C%2033000%20Kuala%20Kangsar%2C%20Perak%2C%20Malaysia!5e0!3m2!1sen!2smy!4v1690484382696!5m2!1sen!2smy" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+  </div>
+        <div class="contact-form">
+            <h2>CONTACT ME</h2>
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+   <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');  
+        }
+
+    </script>
+</body>
+</html>

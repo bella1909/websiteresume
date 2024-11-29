@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SULAM Project</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 45px; 
+            right: -12px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        body.dark-mode header {
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        body.dark-mode nav {
+             background-color: #333; 
+        } 
+
+         body.dark-mode nav ul li a {
+             color: #8b5e3c; 
+        }
+
+        .dark-mode-toggle input {
+            display: none;
+        }
+
+        .dark-mode-toggle .slider {
+            position: relative;
+            width: 50px;
+            height: 28px;
+            background-color: #ccc;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 2px solid #fff; 
+        }
+
+        .dark-mode-toggle .slider::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dark-mode-toggle input:checked + .slider {
+            background-color: #8b5e3c;
+            border-color: #6a482d;
+        }
+
+        /* When checked, move the circle knob */
+        .dark-mode-toggle input:checked + .slider::before {
+            transform: translate(20px, -50%);
+            background-color: #555048;
+        }
+    </style>
+
+</head>
+<body>
+ <br>
+   <header class="animated fade-in-header">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/_nrnabellah/profilecard/?igsh=MjJ3aHpxcmtnNWNt"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/15M8RQtnys/?mibextid=LQQJ4d"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/nurul-nabilah-rosli-48580029b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="linkedin.png" alt="LinkedIn"></a>
+    <div class="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-checkbox" onclick="toggleDarkMode()">
+            <label for="dark-mode-checkbox" class="slider"></label>
+        </div>
+    </header>
+      <nav>
+          <ul style="center" class="fade-in-nav">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="profile.html">Profile</a></li>
+               <li><a href="education.html">Education</a></li>
+               <li><a href="skills.html">Skills</a></li>
+               <li><a href="experience.html" class="active">Experience</a></li>
+               <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+
+    <section class="project-detail-section fade-in-section">
+        <h2>SERVICE LEARNING MALAYSIA - UNIVERSITY FOR SOCIETY (SULAM)</h2>
+        <div class="project-detail-content">
+            <div class="project-images">
+                <img src="sulam2.jpeg" alt="sulam2">
+                <img src="sulam3.png" alt="sulam3">
+            </div>
+            <div class="project-description">
+                <ul>
+                    <li><b>2020</b></li>
+                    <li><b>Served as Director, Secretary, and Facilitator for the community service project.</b></li>
+                    <li><b>Participated in planning and organizing community engagement activities.</b></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+   <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');  
+        }
+
+    </script>
+
+</body>
+</html>
